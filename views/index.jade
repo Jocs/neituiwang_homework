@@ -1,0 +1,136 @@
+extends layout
+
+block content
+  header
+    div(id='header_wrapper')
+      div(id='logo')
+        a(href='http://www.neitui.me/')
+          img(src='/images/logo.png',alt='logo')
+      nav
+        ul
+          li: a(href='javascript:;') 首页
+          li: a(href='javascript:;') 发布职位
+          li: a(href='javascript:;') 搜索简历
+          li: a(href='javascript:;') 公司
+      div(id='user_info')
+        a(href='#',class='weibo')
+        a(href='#',class='qq')
+  section(id='focus_photo')
+    img(src='/images/focus1.jpg',alt='焦点图')
+  section(id='content_wrapper')
+    article(id='brands')
+      div(class='brands_left')
+        span(class='arrow')
+        h2 活动规则
+        ul(class='brands_left_top')
+          li 1)你可以随机翻开三张女神的照片!
+          li 2)分享可解锁所有女神照片，还能赢取ipad mini土豪金等大奖！
+          li 3)送上鲜花为心中女生助力!
+        ul(class='company')
+          li: a(href='javascript:;',id='company1')
+          li: a(href='javascript:;',id='company2')
+          li: a(href='javascript:;',id='company3')
+          li: a(href='javascript:;',id='company4')
+          li: a(href='javascript:;',id='company5')
+          li: a(href='javascript:;',id='company6')
+          li: a(href='javascript:;',id='company7')
+          li: a(href='javascript:;',id='company8')
+          li: a(href='javascript:;',id='company9')
+          li: a(href='javascript:;',id='company10')
+          li: a(href='javascript:;',id='company11')
+          li: a(href='javascript:;',id='company12')
+        h1(class='annual_girl') 年度女神
+      div(class='brands_right')
+        p 时间:10月23日至10月27日截至
+        div(id='time_count')
+          div(id='time_count_left') 女神诞生倒计时
+          canvas(id='canvas',style='display: block')
+          div(id='time_count_bottom') 还有
+    article(id='job_list')
+      ul
+        each job in jobs
+          li(class='job_list_li',jobId=job.id)
+            div(class='mask hidden')
+            div(class='job_info')
+              div(class='info_top')
+                ul
+                  each description in job.description
+                    li(class='red') #{description}
+                h3 女神福利
+                ul
+                  each welfare in job.welfare
+                    li(class='girl_gift') #{welfare}
+                a(href='javascript:;',class='company')
+              div(class='info_bottom')
+                h3 招聘职位 #{job.location}
+                ul
+                  each content in job.content
+                    li(class='job_content'): a(href='javascript:;') #{content}
+                p: a(href='javascript:;')［查看全部］
+  section(id='prize')
+    div(id='prize_inner')
+      h2 微信分享赢大奖
+      ul
+        li
+          div(id='picture1',class='picture')
+          h3 一等奖 一名
+          p ipad mini 一台
+          p 由皑英网络友情赞助
+        li
+          div(id='picture2',class='picture')
+          h3 二等奖 四名
+          p 极客学院VIP年卡 3张
+          p 爱奇艺VIP年卡 1张
+        li
+          div(id='picture3',class='picture')
+          h3 三等奖 十三名
+          p 极客学院VIP月卡 10张
+          p 节操杯 3个
+        li
+          div(id='picture4',class='picture')
+          h3 参与奖 若干
+          p 限量体恤 毛巾套装
+          p 限量版公仔 性价比红包
+  footer
+    div(id='footer_inner')
+      section(id='footer_logo')
+        div(id='inner_logo')
+        p ©2015 上海爱推网络技术有限公司  沪ICP备13010955号
+      section(id='footer_middle')
+        h2 关于我们
+        p 内推网，一个接地气的招聘社区，专注于做互联网行业「内推」「直招」类型的招聘。 
+          a(href='javascript:;') 了解更多 | 
+          a(href='javascript:;') 新手上路&gt;&gt;
+      section(id='footer_right')
+        h2 合作伙伴
+        ul
+          li: a(href='javascript') 人人都是产品经理
+          li: a(href='javascript') 威腾网
+          li: a(href='javascript') 海丁网
+          li: a(href='javascript') 看准网
+          li: a(href='javascript') 应用性能管理
+          li: a(href='javascript') 火星网
+          li: a(href='javascript') SAE
+          li: a(href='javascript') 第九课堂
+          li: a(href='javascript') IT桔子
+          li: a(href='javascript') Android开发网
+          li: a(href='javascript') pmcaff
+          li: a(href='javascript') 查看更多
+  script(src="/javascripts/jquery.min.js") 
+  script(src="/javascripts/animate.js") 
+  script(src="/javascripts/digital.js") 
+  script(src="/javascripts/motivate.js") 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
