@@ -10,10 +10,6 @@ body {
 ul{
 	list-style: none;
 }
-a:hover,a:active{
-	text-decoration: none;
-	color:#1f6692;
-}
 /* TOP_NAV_CSS */
 header{
 	top:0;
@@ -248,7 +244,7 @@ header ul{
 	display: inline-block;
 	width: 320px;
 	height: 480px;
-	background: url('/images/girl.jpg');
+	/*background: url('/images/girl.jpg');*/
 	margin-right: 20px;
 	margin-top: 10px;
 	position: relative;

@@ -4,8 +4,9 @@ block content
   header
     div(id='header_wrapper')
       div(id='logo')
-        a(href='http://www.neitui.me/')
-          img(src='/images/logo.png',alt='logo')
+        h1
+          a(href='http://www.neitui.me/')
+            img(src='/images/logo.png',alt='logo')
       nav
         ul
           li: a(href='javascript:;') 首页
@@ -50,7 +51,9 @@ block content
       ul
         each job in jobs
           li(class='job_list_li',jobId=job.id)
-            div(class='mask hidden')
+            canvas(id='canvas' + job.id,class='srcCanvas',width='320',height='480')
+            img(id='image' + job.id,class='srcImage',src='/images/girl.jpg',alt='女神')
+            div(class='mask hidden blur')
             div(class='job_info')
               div(class='info_top')
                 ul
@@ -117,6 +120,7 @@ block content
           li: a(href='javascript') pmcaff
           li: a(href='javascript') 查看更多
   script(src="/javascripts/jquery.min.js") 
+  script(src='/javascripts/stackBlur.js')
   script(src="/javascripts/animate.js") 
   script(src="/javascripts/digital.js") 
   script(src="/javascripts/motivate.js") 

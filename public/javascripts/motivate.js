@@ -7,7 +7,7 @@ var RADIUS=8;
 var MARGIN_TOP=50;
 var MARGIN_LEFT=30;
 
-const endTime=new Date(2015,7,3,18,18,18);//const申明的变量，是把一个常量赋值给这个变量，并且不能改变。
+const endTime=new Date(2015,7,5,18,18,18);//const申明的变量，是把一个常量赋值给这个变量，并且不能改变。
 var curShowTimeSeconds=0;
 
 var balls=[];//申明一个空的数组，用来储存彩色小球。
